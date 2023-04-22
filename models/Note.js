@@ -26,10 +26,4 @@ const noteSchema = new mongoose.Schema(
   }
 );
 
-noteSchema.plugin(AutoIncrmenet, {
-  inc_field: 'ticket',
-  id: 'ticketNums',
-  starts_seq: 500,
-});
-
 module.exports = mongoose.model('Note', noteSchema);
